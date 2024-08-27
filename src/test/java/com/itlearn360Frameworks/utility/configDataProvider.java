@@ -22,6 +22,8 @@ public class configDataProvider {
 			} catch (IOException e) {
 				
 				e.printStackTrace();
+				
+				System.out.println("this is exception");
 			}
 		} catch (FileNotFoundException e) {
 			
