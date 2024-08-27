@@ -53,6 +53,18 @@ public class configDataProvider {
 		return pro.getProperty("Forgotpasswordtittle");
 	}
 	
+	public static String username()
+	{
+		return pro.getProperty("username");
+	}
+	public static String password()
+	{
+		return pro.getProperty("password");
+	}
+	public static String wrongusernamepass()
+	{
+		return pro.getProperty("inviduseranamepasswordpagetittle");
+	}
 	
 }
 

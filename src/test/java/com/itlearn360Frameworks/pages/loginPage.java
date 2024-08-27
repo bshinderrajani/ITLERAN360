@@ -30,6 +30,16 @@ public class loginPage {
 	@FindBy(xpath = "//a[@title='Password Lost and Found']")
 	private WebElement forgotpass_link;
 	
+	
+	@FindBy(xpath = "//i[@class='fa fa-user']")
+	private WebElement logout_img;
+	
+	@FindBy(xpath = "//a[contains(text(),'Logout')]")
+	private WebElement logout;
+	
+	@FindBy(xpath = "//a[text()='← Go to ITlearn360']")
+	private WebElement btn_goto;
+	
 	public void click_login()
 	{
 		loginbutton.click();
@@ -52,5 +62,18 @@ public class loginPage {
 	public void click_forgotpassword_link()
 	{
 		forgotpass_link.click();
+	}
+	
+	public void Click_logoutImg()
+	{
+		logout_img.click();
+	}
+	public void Click_logout()
+	{
+		logout.click();
+	}
+	public void btn_goto_method()
+	{
+		btn_goto.click();
 	}
 }

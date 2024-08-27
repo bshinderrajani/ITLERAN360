@@ -1,25 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="6" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-27T14:50:41 IST" name="Default suite" finished-at="2024-08-27T14:50:55 IST" duration-ms="14376">
+  <suite started-at="2024-08-27T21:24:33 IST" name="Default suite" finished-at="2024-08-27T21:25:13 IST" duration-ms="39954">
     <groups>
     </groups>
-    <test started-at="2024-08-27T14:50:41 IST" name="Default test" finished-at="2024-08-27T14:50:55 IST" duration-ms="14376">
-      <class name="com.itlearn360Frameworks.TestCase.forgotPassword">
-        <test-method is-config="true" signature="BrowserLaunch()[pri:0, instance:com.itlearn360Frameworks.TestCase.forgotPassword@48e4374]" started-at="2024-08-27T14:50:41 IST" name="BrowserLaunch" finished-at="2024-08-27T14:50:52 IST" duration-ms="11191" status="PASS">
+    <test started-at="2024-08-27T21:24:33 IST" name="Default test" finished-at="2024-08-27T21:25:13 IST" duration-ms="39954">
+      <class name="com.itlearn360Frameworks.TestCase.loginTest">
+        <test-method is-config="true" signature="BrowserLaunch()[pri:0, instance:com.itlearn360Frameworks.TestCase.loginTest@70e8f8e]" started-at="2024-08-27T21:24:33 IST" name="BrowserLaunch" finished-at="2024-08-27T21:24:47 IST" duration-ms="14056" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserLaunch -->
-        <test-method signature="Test_Forgotpass()[pri:1, instance:com.itlearn360Frameworks.TestCase.forgotPassword@48e4374]" started-at="2024-08-27T14:50:52 IST" name="Test_Forgotpass" finished-at="2024-08-27T14:50:54 IST" duration-ms="1743" status="PASS">
+        <test-method signature="verifyLogin_dataDriven(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.itlearn360Frameworks.TestCase.loginTest@70e8f8e]" started-at="2024-08-27T21:24:49 IST" name="verifyLogin_dataDriven" data-provider="LoginDataProvider" finished-at="2024-08-27T21:24:54 IST" duration-ms="5001" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Demo12]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test123456$]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[valid]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Test_Forgotpass -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.itlearn360Frameworks.TestCase.forgotPassword@48e4374]" started-at="2024-08-27T14:50:54 IST" name="closeBrowser" finished-at="2024-08-27T14:50:55 IST" duration-ms="1405" status="PASS">
+        </test-method> <!-- verifyLogin_dataDriven -->
+        <test-method signature="verifyLogin_dataDriven(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.itlearn360Frameworks.TestCase.loginTest@70e8f8e]" started-at="2024-08-27T21:24:54 IST" name="verifyLogin_dataDriven" data-provider="LoginDataProvider" finished-at="2024-08-27T21:24:58 IST" duration-ms="4122" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Demo123456]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test123456789]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Invalid]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin_dataDriven -->
+        <test-method signature="verifyLogin_dataDriven(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.itlearn360Frameworks.TestCase.loginTest@70e8f8e]" started-at="2024-08-27T21:24:58 IST" name="verifyLogin_dataDriven" data-provider="LoginDataProvider" finished-at="2024-08-27T21:25:01 IST" duration-ms="3053" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Demo12]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[adhaavhhv]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Invalid]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin_dataDriven -->
+        <test-method signature="verifyLogin_dataDriven(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.itlearn360Frameworks.TestCase.loginTest@70e8f8e]" started-at="2024-08-27T21:25:01 IST" name="verifyLogin_dataDriven" data-provider="LoginDataProvider" finished-at="2024-08-27T21:25:05 IST" duration-ms="4039" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dvsdvjdv]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test123456$]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Invalid]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin_dataDriven -->
+        <test-method signature="verifyLogin_dataDriven(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.itlearn360Frameworks.TestCase.loginTest@70e8f8e]" started-at="2024-08-27T21:25:05 IST" name="verifyLogin_dataDriven" data-provider="LoginDataProvider" finished-at="2024-08-27T21:25:12 IST" duration-ms="6549" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Demo12 ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test123456$]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[valid]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin_dataDriven -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.itlearn360Frameworks.TestCase.loginTest@70e8f8e]" started-at="2024-08-27T21:25:12 IST" name="closeBrowser" finished-at="2024-08-27T21:25:13 IST" duration-ms="1530" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.itlearn360Frameworks.TestCase.forgotPassword -->
+      </class> <!-- com.itlearn360Frameworks.TestCase.loginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
