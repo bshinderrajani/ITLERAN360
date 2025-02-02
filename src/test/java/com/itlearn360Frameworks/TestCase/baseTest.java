@@ -7,9 +7,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
-
-import com.aventstack.chaintest.plugins.ChainTestListener;
 import com.itlearn360Frameworks.utility.BrowserFactory;
 import com.itlearn360Frameworks.utility.configDataProvider;
 
