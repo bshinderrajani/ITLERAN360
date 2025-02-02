@@ -10,6 +10,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import com.itlearn360Frameworks.Constants.frameworkConstant;
+
 public class BrowserFactory {
 
 	public static WebDriver startApplication(WebDriver driver,String browername,String appUrl)
@@ -44,7 +46,7 @@ public class BrowserFactory {
 
 		driver.manage().window().maximize();
 		driver.get(appUrl);
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(frameworkConstant.getImlicitwait(),TimeUnit.SECONDS);
 		return driver;
 
 	}

@@ -6,7 +6,12 @@ import org.testng.annotations.Test;
 import com.itlearn360Frameworks.pages.loginPage;
 import com.itlearn360Frameworks.utility.configDataProvider;
 
-public class forgotPassword extends baseTest{
+public final class forgotPassword extends baseTest{
+	
+	private forgotPassword()
+	{
+		
+	}
 
 	@Test(priority = 1, enabled = true)
 	void Test_Forgotpass()

@@ -14,19 +14,30 @@
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-<dependency>
+<!--<dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
     <version>7.9.0</version>
-    <scope>test</scope>
+    <scope>compile</scope>
+</dependency> -->
+
+<!-- https://mvnrepository.com/artifact/com.aventstack/chaintest-testng -->
+
+<!-- https://mvnrepository.com/artifact/com.aventstack/chaintest-testng -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>chaintest-testng</artifactId>
+    <version>1.0.6</version>
 </dependency>
+
+
 
 <!-- https://mvnrepository.com/artifact/junit/junit -->
 <dependency>
     <groupId>junit</groupId>
     <artifactId>junit</artifactId>
     <version>4.13.2</version>
-    <scope>test</scope>
+
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
@@ -44,11 +55,11 @@
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-<dependency>
+<!--<dependency>
     <groupId>com.aventstack</groupId>
     <artifactId>extentreports</artifactId>
     <version>5.0.9</version>
-</dependency>
+</dependency> -->
 
 <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
 <dependency>
@@ -63,15 +74,54 @@
   <groupId>ch.qos.logback</groupId>
   <artifactId>logback-classic</artifactId>
   <version>1.4.5</version>
+</dependency>	  
+
+
+<dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <optional>true</optional>
 </dependency>
 
-	  
-	 
-	  
-	  
-	  
+
+
   </dependencies>
   
+  <build>
+    <plugins>
+    <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          
+          <configuration>
+            <source>1.8</source>
+            <target>1.8</target>
+          </configuration>
+    </plugin>
+    
+    
+    <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.2</version>
+          
+          <configuration>
+			 
+          <suiteXmlFiles>
+          <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+          
+          
+          </suiteXmlFiles>
+          </configuration>
+        </plugin>
+    
+    </plugins>
+    
+  </build> 
+
+ 
+	  
   
   
 </project>

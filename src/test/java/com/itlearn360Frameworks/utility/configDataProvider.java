@@ -6,45 +6,50 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+import com.itlearn360Frameworks.Constants.frameworkConstant;
+
 public class configDataProvider {
-	
-	 static Properties pro;
-	
+
+	static Properties pro;
+
 	public configDataProvider()
 	{
-		File src=new File("./Confugration/config.properties");
-		
+
+
+		File src=new File(frameworkConstant.getConfigfilepath());
+
+
 		try {
 			FileInputStream fis=new FileInputStream(src);
 			pro=new Properties();
 			try {
 				pro.load(fis);
 			} catch (IOException e) {
-				
+
 				e.printStackTrace();
-				
+
 				System.out.println("this is exception");
 			}
 		} catch (FileNotFoundException e) {
-			
+
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	
-	
-	
+
+
+
+
 	public String getBrowser()
 	{
 		return pro.getProperty("browser");
 	}
-	
+
 	public String getUrl()
 	{
 		return pro.getProperty("testurl");
 	}
-	
+
 	public static  String homePagetitke()
 	{
 		return pro.getProperty("Homepagetitle");
@@ -54,7 +59,7 @@ public class configDataProvider {
 	{
 		return pro.getProperty("Forgotpasswordtittle");
 	}
-	
+
 	public static String username()
 	{
 		return pro.getProperty("username");
@@ -67,6 +72,6 @@ public class configDataProvider {
 	{
 		return pro.getProperty("inviduseranamepasswordpagetittle");
 	}
-	
+
 }
 

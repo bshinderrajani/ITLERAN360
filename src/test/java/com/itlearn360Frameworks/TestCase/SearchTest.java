@@ -1,5 +1,10 @@
 package com.itlearn360Frameworks.TestCase;
 
-public class SearchTest {
+public final class SearchTest extends baseTest {
+	
+	private SearchTest()
+	{
+		
+	}
 
 }

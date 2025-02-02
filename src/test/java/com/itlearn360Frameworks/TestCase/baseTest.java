@@ -1,18 +1,33 @@
 package com.itlearn360Frameworks.TestCase;
 
+import java.io.File;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+
+import com.aventstack.chaintest.plugins.ChainTestListener;
 import com.itlearn360Frameworks.utility.BrowserFactory;
 import com.itlearn360Frameworks.utility.configDataProvider;
 
-public class baseTest {
+//@Listeners(ChainTestListener.class)
+public  class baseTest {
+	
+	protected baseTest()
+	{
+		
+	}
 
 	public static WebDriver driver;
 	static configDataProvider config=new configDataProvider();
 	@BeforeClass
 	public static void BrowserLaunch()
 	{
+	
+		
 		driver=BrowserFactory.startApplication(driver,config.getBrowser() ,config.getUrl());
 	}
 
@@ -20,5 +35,13 @@ public class baseTest {
 	public static  void closeBrowser()
 	{
 		BrowserFactory.quitBrowser(driver);
+	
+	}
+	
+	public void takescreenShot()
+	{
+		File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		//ChainTestListener.embed(screenshot,"image/png");
+		
 	}
 }

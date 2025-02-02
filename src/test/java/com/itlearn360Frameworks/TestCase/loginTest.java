@@ -4,27 +4,41 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.aventstack.chaintest.plugins.ChainTestListener;
+import com.itlearn360Frameworks.Constants.frameworkConstant;
 import com.itlearn360Frameworks.pages.loginPage;
 import com.itlearn360Frameworks.utility.ReadDataFromExcel;
 import com.itlearn360Frameworks.utility.configDataProvider;
 
-public class loginTest extends baseTest {
+public final  class  loginTest extends baseTest {
+	
+	private loginTest()
+	{
+		
+	}
 
-	String  fileName=System.getProperty("user.dir")+"\\Data\\TestInfo.xlsx";
+//	String  fileName=System.getProperty("user.dir")+"\\Data\\TestInfo.xlsx";
+	String  fileName=frameworkConstant.getFilename();
 	String Expectedtittle=configDataProvider.homePagetitke();
 	@Test(priority = 1,enabled = true)
 	void verifyLogin()
 	{
 		loginPage lp=new loginPage(driver);
 		lp.click_login();
+		ChainTestListener.log("User enter email address");
 		lp.set_username(configDataProvider.username());
+		ChainTestListener.log("User enter passord");
 		lp.set_pass(configDataProvider.password());
+		ChainTestListener.log("click on login button");
 		lp.click_login_button();
+		
 		
 		
 		System.out.println(driver.getTitle());
 		Assert.assertTrue(Expectedtittle.contentEquals(driver.getTitle()),"Test is fail");
 		//Assert.assertEquals(driver.getTitle(), Expectedtittle);
+		lp.Click_logoutImg();
+		lp.Click_logout();
 	}
 	
 	@Test(priority = 2,enabled = true,dataProvider = "LoginDataProvider")
